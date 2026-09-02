@@ -1,0 +1,693 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Islem Khemissi — CV</title>
+<meta name="description" content="CV of Islem Khemissi, software engineer and PhD fast-track candidate in Software Engineering at Concordia University.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --paper:#f5f4ee;
+    --ink:#1e222b;
+    --ink-soft:#585d68;
+    --ink-faint:#8a8e97;
+    --rule:#dcdbd2;
+    --sidebar-bg:#eaecee;
+    --accent:#b8763a;
+    --accent-2:#3d6b6b;
+    --tag-bg:#eee3d3;
+    --tag-lead-bg:#b8763a;
+    --tag-lead-ink:#fbf4ea;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --paper:#14161a;
+      --ink:#e8e7df;
+      --ink-soft:#a3a6ad;
+      --ink-faint:#686c75;
+      --rule:#2a2d33;
+      --sidebar-bg:#1a1d23;
+      --accent:#d99a5c;
+      --accent-2:#6fa6a3;
+      --tag-bg:#2a2115;
+      --tag-lead-bg:#b8763a;
+      --tag-lead-ink:#1a1410;
+    }
+  }
+  /* fixed, theme-independent header band */
+  :root{
+    --hdr-bg:#1c2436;
+    --hdr-ink:#f2f1ea;
+    --hdr-soft:#b7bcc9;
+    --hdr-gold:#d99a5c;
+  }
+
+  *{box-sizing:border-box;}
+  html,body{ margin:0; }
+  body{
+    background: var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', system-ui, sans-serif;
+  }
+  img{ max-width:100%; }
+
+  .page{ max-width: 900px; margin: 0 auto; }
+
+  /* ---------- header band ---------- */
+  .hdr{
+    background:
+      repeating-linear-gradient(
+        115deg,
+        rgba(217,154,92,.05) 0px,
+        rgba(217,154,92,.05) 1px,
+        transparent 1px,
+        transparent 64px
+      ),
+      var(--hdr-bg);
+    color: var(--hdr-ink);
+    border-bottom: 3px solid var(--hdr-gold);
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    align-items: stretch;
+  }
+  .hdr-main{
+    padding: 46px 40px 26px 56px;
+  }
+  .hdr-name{
+    font-family:'Source Serif 4', Georgia, serif;
+    font-weight:700;
+    font-size: 2.6rem;
+    line-height:1.05;
+    letter-spacing: -0.01em;
+    margin: 0 0 6px;
+    text-wrap: balance;
+  }
+  .hdr-role{
+    font-size: .92rem;
+    color: var(--hdr-gold);
+    font-weight: 500;
+    margin: 0 0 18px;
+  }
+  .hdr-summary{
+    font-size: .95rem;
+    line-height: 1.6;
+    color: var(--hdr-soft);
+    max-width: 58ch;
+    margin: 0 0 22px;
+  }
+  .hdr-foot{
+    border-top: 1px solid rgba(244,241,228,.16);
+    padding-top: 16px;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:space-between;
+    gap: 12px;
+  }
+  .hdr-pills{ display:flex; flex-wrap:wrap; gap:8px; }
+  .hdr-pill{
+    font-family:'IBM Plex Mono', ui-monospace, monospace;
+    font-size: .68rem;
+    letter-spacing:.02em;
+    color: var(--hdr-soft);
+    border: 1px solid rgba(244,241,228,.22);
+    border-radius: 20px;
+    padding: 4px 11px;
+  }
+  .hdr-pill.status{
+    color: var(--hdr-gold);
+    border-color: rgba(217,154,92,.5);
+  }
+  .hdr-links{
+    font-family:'IBM Plex Mono', ui-monospace, monospace;
+    font-size: .76rem;
+    display:flex;
+    flex-wrap:wrap;
+    gap: 4px 14px;
+  }
+
+  /* header stat rail */
+  .hdr-stats{
+    border-left: 1px solid rgba(244,241,228,.14);
+    background: rgba(0,0,0,.14);
+    padding: 46px 28px 26px;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    gap: 22px;
+  }
+  .stat-num{
+    font-family:'Source Serif 4', Georgia, serif;
+    font-weight:700;
+    font-size: 1.9rem;
+    line-height:1;
+    color: var(--hdr-gold);
+    font-variant-numeric: tabular-nums;
+  }
+  .stat-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: .66rem;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    color: var(--hdr-soft);
+    margin-top: 3px;
+    line-height:1.4;
+  }
+  .hdr-links a{ color: var(--hdr-gold); text-decoration:none; }
+  .hdr-links a:hover{ text-decoration:underline; }
+  .hdr-links span{ color: var(--hdr-soft); }
+  .hdr-links .sep{ color: rgba(244,241,228,.3); }
+
+  /* ---------- body grid ---------- */
+  .body{
+    display:grid;
+    grid-template-columns: 240px 1fr;
+  }
+  .sidebar{
+    background: var(--sidebar-bg);
+    padding: 34px 26px 40px;
+    border-right: 1px solid var(--rule);
+  }
+  .main{
+    padding: 34px 56px 56px;
+  }
+
+  .eyebrow{
+    font-family:'IBM Plex Mono', ui-monospace, monospace;
+    font-size: .68rem;
+    font-weight: 500;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--accent-2);
+    margin: 0 0 10px;
+  }
+  .side-block{ margin-bottom: 28px; }
+  .side-block:last-child{ margin-bottom:0; }
+  .side-item{ margin-bottom: 12px; }
+  .side-item:last-child{ margin-bottom:0; }
+  .side-title{ font-size:.82rem; font-weight:600; color:var(--ink); line-height:1.35; }
+  .side-org{ font-size:.76rem; color:var(--ink-soft); margin-top:1px; }
+  .side-date{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.68rem;
+    color: var(--ink-faint);
+    margin-top: 2px;
+  }
+  .side-note{ font-size:.74rem; color:var(--ink-soft); margin-top:3px; line-height:1.5; }
+  .side-fr{ font-size:.68rem; font-style:italic; color:var(--ink-faint); margin-top:1px; line-height:1.35; }
+  .wes-badge{
+    display:flex;
+    align-items:baseline;
+    gap:8px;
+    background: var(--tag-bg);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 4px 4px 0;
+    padding: 7px 10px;
+    margin-bottom: 14px;
+  }
+  .wes-badge .wes-mark{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.62rem;
+    font-weight:600;
+    letter-spacing:.04em;
+    color: var(--accent);
+    white-space:nowrap;
+  }
+  .wes-badge .wes-text{ font-size:.72rem; color:var(--ink); line-height:1.35; }
+
+  .cert-wrap{ display:flex; flex-wrap:wrap; gap:7px; }
+  .cert-chip{
+    font-size:.72rem;
+    line-height:1.3;
+    padding: 5px 10px;
+    border-radius: 20px;
+  }
+  .cert-chip.primary{
+    background: var(--accent);
+    color: var(--tag-lead-ink);
+    font-weight:600;
+  }
+  .cert-chip.secondary{
+    border: 1px solid var(--rule);
+    color: var(--ink-soft);
+  }
+  .side-flat{ font-size:.8rem; color:var(--ink); line-height:1.6; }
+  .side-flat + .side-flat{ margin-top:8px; }
+
+  /* main section headings: carry real weight */
+  .h-main{
+    font-family:'Source Serif 4', Georgia, serif;
+    font-weight:600;
+    font-size: 1.5rem;
+    color: var(--ink);
+    margin: 0 0 4px;
+    text-wrap: balance;
+  }
+  .h-sub{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.68rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color: var(--ink-faint);
+    margin: 0 0 16px;
+  }
+  section.main-sec{ margin-bottom: 40px; }
+  section.main-sec:last-child{ margin-bottom:0; }
+
+  /* highlights: tagged rows, not one flat box */
+  .callout{
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .hl-row{
+    display:grid;
+    grid-template-columns: 92px 1fr;
+    gap: 18px;
+    padding: 16px 22px;
+    align-items: baseline;
+  }
+  .hl-row + .hl-row{ border-top: 1px solid var(--rule); }
+  .hl-row:nth-child(odd){ background: color-mix(in srgb, var(--paper) 96%, var(--ink) 4%); }
+  .hl-tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: .66rem;
+    font-weight: 500;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .hl-row.tag-talk .hl-tag{ color: var(--accent-2); }
+  .hl-row.tag-role .hl-tag{ color: var(--ink-soft); }
+  .hl-text{ font-size:.95rem; line-height:1.55; color:var(--ink); }
+  .hl-text b{ color: var(--accent); font-weight:600; }
+  .hl-row.tag-talk .hl-text b{ color: var(--accent-2); }
+
+  /* publication cards */
+  .pub{
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+    background: color-mix(in srgb, var(--paper) 92%, var(--accent) 3%);
+  }
+  .pub:last-child{ margin-bottom:0; }
+  .pub-head{ display:flex; justify-content:space-between; gap:14px; align-items:flex-start; flex-wrap:wrap; }
+  .pub-title{ font-weight:600; font-size:.98rem; color:var(--ink); }
+  .pub-venue{ font-size:.78rem; color:var(--ink-soft); margin-top:2px; }
+  .pub-desc{ font-size:.87rem; line-height:1.55; color:var(--ink-soft); margin: 8px 0 0; }
+
+  .badge{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.64rem;
+    font-weight:500;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    padding: 3px 9px;
+    border-radius: 20px;
+    white-space:nowrap;
+  }
+  .badge-lead{ background: var(--tag-lead-bg); color: var(--tag-lead-ink); }
+  .badge-co{ border:1px solid var(--accent); color: var(--accent); }
+  .badge-progress{ border:1px dashed var(--ink-faint); color: var(--ink-soft); }
+  .badge-collab{ border:1px solid var(--accent-2); color: var(--accent-2); }
+
+  /* experience entries */
+  .job{ margin-bottom: 22px; }
+  .job:last-child{ margin-bottom:0; }
+  .job-head{ display:flex; justify-content:space-between; gap:16px; align-items:baseline; flex-wrap:wrap; }
+  .job-title{ font-weight:600; font-size:.98rem; color:var(--ink); }
+  .job-org{ font-weight:400; color:var(--ink-soft); }
+  .job-date{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.72rem;
+    color: var(--ink-faint);
+    white-space:nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+  .job-date.current{ color: var(--accent); }
+  .job-sub{ font-size:.83rem; color:var(--ink-soft); margin-top:3px; }
+  .job ul{ margin:8px 0 0; padding-left:18px; display:flex; flex-direction:column; gap:5px; }
+  .job li{ font-size:.89rem; line-height:1.55; color:var(--ink); }
+  .job li::marker{ color: var(--accent); }
+
+  /* compact two-col strip: teaching / conferences */
+  .strip2{ display:grid; grid-template-columns:1fr 1fr; gap: 28px; }
+  .rows{ display:flex; flex-direction:column; gap:10px; }
+  .row-main{ font-size:.87rem; color:var(--ink); line-height:1.5; }
+  .row-main b{ font-weight:600; }
+  .row-date{ font-family:'IBM Plex Mono', monospace; font-size:.7rem; color:var(--ink-faint); display:block; margin-top:1px; }
+
+  .strip-head{ display:flex; align-items:baseline; justify-content:space-between; gap:10px; margin-bottom:12px; }
+  .strip-head .h-main{ margin-bottom:0; }
+  .strip-count{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.66rem;
+    color: var(--ink-faint);
+    white-space:nowrap;
+  }
+  .mini{
+    border: 1px solid var(--rule);
+    border-radius: 7px;
+    padding: 11px 13px;
+    margin-bottom: 9px;
+  }
+  .mini:last-child{ margin-bottom:0; }
+  .mini-head{ display:flex; justify-content:space-between; gap:10px; align-items:baseline; flex-wrap:wrap; }
+  .mini-title{ font-weight:600; font-size:.84rem; color:var(--ink); }
+  .mini-sub{ font-size:.75rem; color:var(--ink-soft); margin-top:2px; }
+  .mini-date{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.66rem;
+    color: var(--ink-faint);
+    white-space:nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+  .mini-date.current{ color: var(--accent); }
+  .mini .badge{ margin-top:6px; }
+  .mini .badge + .badge{ margin-left:6px; }
+
+  /* earlier experience: deliberately quiet */
+  .earlier{ border-top: 1px solid var(--rule); padding-top: 14px; margin-top: 22px; }
+  .earlier-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.64rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color: var(--ink-faint);
+    margin: 0 0 10px;
+  }
+  .earlier p{ font-size:.8rem; line-height:1.65; color:var(--ink-faint); margin:0 0 5px; }
+  .earlier b{ color: var(--ink-soft); font-weight:600; }
+
+  @media print{
+    body{ background: var(--paper); }
+    .page{ max-width:none; }
+    .hdr{ padding: 0.4in 0.55in 0.3in; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    .body{ grid-template-columns: 200px 1fr; }
+    .sidebar{ padding: 0.3in 0.3in 0.3in 0.55in; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    .main{ padding: 0.3in 0.55in 0.3in 0.3in; }
+    .main-sec, .pub, .job{ break-inside: avoid; }
+    .pub{ background: var(--paper); }
+  }
+
+  @media (max-width: 720px){
+    .body{ grid-template-columns: 1fr; }
+    .sidebar{ border-right:none; border-bottom:1px solid var(--rule); }
+    .strip2{ grid-template-columns: 1fr; }
+    .hdr{ grid-template-columns: 1fr; }
+    .hdr-main{ padding: 34px 24px 20px; }
+    .hdr-stats{ border-left:none; border-top:1px solid rgba(244,241,228,.14); flex-direction:row; flex-wrap:wrap; padding: 20px 24px; }
+    .main{ padding: 28px 24px 40px; }
+    .hdr-name{ font-size: 2rem; }
+    .hl-row{ grid-template-columns: 1fr; gap:4px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="hdr">
+    <div class="hdr-main">
+      <h1 class="hdr-name">Islem Khemissi</h1>
+      <p class="hdr-role">Software Engineer → PhD Fast-Track Candidate · Concordia University</p>
+      <p class="hdr-summary">10+ years leading production systems and DevOps infrastructure, now researching how humans and coding agents collaborate in code review. Industry background in code review, CI/CD, and infrastructure at scale directly informs the research questions studied: how agent-authored code gets integrated by human reviewers, and how large pull requests get split and reviewed in practice.</p>
+      <div class="hdr-foot">
+        <div class="hdr-pills">
+          <span class="hdr-pill">Westmount, Québec, Canada</span>
+          <span class="hdr-pill status">Permanent Resident of Canada</span>
+        </div>
+        <div class="hdr-links">
+          <a href="mailto:khemissi.islem@outlook.com">khemissi.islem@outlook.com</a>
+          <span class="sep">·</span> <span>+1 514 953 0513</span>
+          <span class="sep">·</span> <a href="https://linkedin.com/in/islem-khemissi">linkedin.com/in/islem-khemissi</a>
+          <span class="sep">·</span> <a href="https://github.com/islem-kms">github.com/islem-kms</a>
+        </div>
+      </div>
+    </div>
+    <div class="hdr-stats">
+      <div>
+        <div class="stat-num">10+</div>
+        <div class="stat-label">Years in engineering &amp; DevOps</div>
+      </div>
+      <div>
+        <div class="stat-num">2</div>
+        <div class="stat-label">Lead-author publications</div>
+      </div>
+      <div>
+        <div class="stat-num">2</div>
+        <div class="stat-label">Conferences: MSR &amp; FSE 2026</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="body">
+
+    <aside class="sidebar">
+
+      <div class="side-block">
+        <p class="eyebrow">Education</p>
+
+        <div class="wes-badge">
+          <span class="wes-mark">WES</span>
+          <span class="wes-text">Master's-equivalence on file (World Education Services)</span>
+        </div>
+
+        <div class="side-item">
+          <div class="side-title">M.Sc. Software Engineering</div>
+          <div class="side-org">Concordia University</div>
+          <div class="side-date">Fall 2025 – present</div>
+          <div class="side-note">PhD fast-track candidate, targeting Winter 2027. Supervisor: Prof. Moataz Chouchen.</div>
+        </div>
+        <div class="side-item">
+          <div class="side-title">Engineering Degree, Mobile Information Systems</div>
+          <div class="side-fr">Diplôme d'ingénieur, Systèmes d'Informations Mobiles</div>
+          <div class="side-org">ESPRIT, Tunisia</div>
+          <div class="side-date">2016 – 2018</div>
+        </div>
+        <div class="side-item">
+          <div class="side-title">Research Master's, Business Intelligence &amp; Decision Support Systems</div>
+          <div class="side-fr">Master de recherche, Informatique Décisionnelle et Intelligence Appliquée à la Gestion</div>
+          <div class="side-org">ESC Manouba / IHEC, Tunisia</div>
+          <div class="side-date">2012 – 2014</div>
+          <div class="side-note">Year 1 completed.</div>
+        </div>
+        <div class="side-item">
+          <div class="side-title">Bachelor's Degree, Management Information Systems</div>
+          <div class="side-fr">Licence Fondamentale en Informatique de Gestion</div>
+          <div class="side-org">ESC Manouba, Tunisia</div>
+          <div class="side-date">2009 – 2012</div>
+        </div>
+      </div>
+
+      <div class="side-block">
+        <p class="eyebrow">Technical Skills</p>
+        <div class="side-flat"><b>Languages</b><br>Python, TypeScript/Node.js, PHP/Laravel</div>
+        <div class="side-flat"><b>Infrastructure</b><br>AWS, Kubernetes, Docker</div>
+        <div class="side-flat"><b>Research tooling</b><br>GitHub Research Scraper, GitHub Token Manager, ARIA (self-designed empirical-SE framework)</div>
+      </div>
+
+      <div class="side-block">
+        <p class="eyebrow">Certifications</p>
+        <div class="cert-wrap">
+          <span class="cert-chip primary">AWS Certified Solutions Architect</span>
+          <span class="cert-chip secondary">Securing AngularJS with Auth0</span>
+          <span class="cert-chip secondary">Fundamentals of Digital Marketing</span>
+        </div>
+      </div>
+
+      <div class="side-block">
+        <p class="eyebrow">Honors &amp; Awards</p>
+        <div class="side-item">
+          <div class="side-title">2nd Place, AIESEC Mobile Hackathon</div>
+          <div class="side-date">2017</div>
+          <div class="side-note">Give'n'Go: Android/iOS prototype connecting donors with on-site trips to underserved communities, letting people donate in person rather than through an association.</div>
+        </div>
+      </div>
+
+    </aside>
+
+    <main class="main">
+
+      <section class="main-sec">
+        <p class="h-sub">Highlights</p>
+        <div class="callout">
+          <div class="hl-row tag-pub">
+            <span class="hl-tag">Pubs</span>
+            <span class="hl-text"><b>Lead author</b> on 2 accepted papers (SmartPatchLinker, FSE 2026 Demo Track; "Humans Integrate, Agents Fix", MSR 2026 Challenge Track), plus co-author on a third (EASE 2026); all built on a 932k-PR agent-authored dataset.</span>
+          </div>
+          <div class="hl-row tag-talk">
+            <span class="hl-tag">Talks</span>
+            <span class="hl-text">Presented at <b>MSR 2026</b> (Rio de Janeiro) and <b>FSE 2026</b> (Concordia, host institution).</span>
+          </div>
+          <div class="hl-row tag-role">
+            <span class="hl-tag">Role</span>
+            <span class="hl-text"><b>7+ years</b> leading web engineering and DevOps at 360Medlink Inc, serving major pharma/medical clients (Novartis, Pfizer, Qutenza, Pierre Fabre).</span>
+          </div>
+          <div class="hl-row tag-talk">
+            <span class="hl-tag">Collab</span>
+            <span class="hl-text">Active external research collaboration with <b>FARD Lab</b> (UBC Okanagan) on CodeFaithBench, targeting NeurIPS 2026 workshop.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-sec">
+        <h2 class="h-main">Research &amp; Publications</h2>
+
+        <div class="pub">
+          <div class="pub-head">
+            <div>
+              <div class="pub-title">SmartPatchLinker</div>
+              <div class="pub-venue">FSE 2026 Demo Track</div>
+            </div>
+            <span class="badge badge-lead">Lead author</span>
+          </div>
+          <p class="pub-desc">Browser extension detecting semantically related patches in Gerrit code review in real time.</p>
+        </div>
+
+        <div class="pub">
+          <div class="pub-head">
+            <div>
+              <div class="pub-title">"Humans Integrate, Agents Fix"</div>
+              <div class="pub-venue">MSR 2026 Challenge Track · presented in Rio de Janeiro</div>
+            </div>
+            <span class="badge badge-lead">Lead author</span>
+          </div>
+          <p class="pub-desc">How agent-authored PRs are referenced in code review; taxonomy of reference types (95.6% human-initiated).</p>
+        </div>
+
+        <div class="pub">
+          <div class="pub-head">
+            <div>
+              <div class="pub-title">"Is This Pull Request Ready for Review?"</div>
+              <div class="pub-venue">EASE 2026</div>
+            </div>
+            <span class="badge badge-co">Co-author</span>
+          </div>
+          <p class="pub-desc">Readiness-for-review (RFR) signal usage in agent-authored PRs (9.8% adoption, 94.7% human-initiated).</p>
+        </div>
+
+        <div class="pub">
+          <div class="pub-head">
+            <div>
+              <div class="pub-title">Large pull requests study</div>
+              <div class="pub-venue">Concordia University</div>
+            </div>
+            <span class="badge badge-progress">In progress</span>
+          </div>
+          <p class="pub-desc">Investigating characteristics and developer practices around large pull requests.</p>
+        </div>
+
+        <div class="pub">
+          <div class="pub-head">
+            <div>
+              <div class="pub-title">CodeFaithBench</div>
+              <div class="pub-venue">FARD Lab, UBC Okanagan · targeting NeurIPS 2026 workshop</div>
+            </div>
+            <span class="badge badge-collab">Collaboration</span>
+          </div>
+          <p class="pub-desc">Benchmark for causal faithfulness of LLM code-reasoning explanations.</p>
+        </div>
+      </section>
+
+      <section class="main-sec">
+        <div class="strip2">
+          <div>
+            <div class="strip-head">
+              <h2 class="h-main" style="font-size:1.1rem;">Teaching</h2>
+              <span class="strip-count">COEN 243</span>
+            </div>
+
+            <div class="mini">
+              <div class="mini-head">
+                <span class="mini-title">TA, Lab &amp; Tutorial Sessions</span>
+                <span class="mini-date current">Fall 2026</span>
+              </div>
+              <div class="mini-sub">Concordia University</div>
+              <span class="badge badge-lead">Current</span>
+            </div>
+
+            <div class="mini">
+              <div class="mini-head">
+                <span class="mini-title">TA, Student Grading</span>
+                <span class="mini-date">Winter 2026</span>
+              </div>
+              <div class="mini-sub">Concordia University</div>
+            </div>
+          </div>
+
+          <div>
+            <div class="strip-head">
+              <h2 class="h-main" style="font-size:1.1rem;">Conferences</h2>
+              <span class="strip-count">2 in 2026</span>
+            </div>
+
+            <div class="mini">
+              <div class="mini-head">
+                <span class="mini-title">MSR 2026</span>
+                <span class="mini-date">Rio de Janeiro</span>
+              </div>
+              <div class="mini-sub">Presented "Humans Integrate, Agents Fix"</div>
+              <span class="badge badge-co">Presenter</span>
+            </div>
+
+            <div class="mini">
+              <div class="mini-head">
+                <span class="mini-title">FSE 2026</span>
+                <span class="mini-date">Concordia</span>
+              </div>
+              <div class="mini-sub">Presented SmartPatchLinker</div>
+              <span class="badge badge-co">Presenter</span>
+              <span class="badge badge-lead">Volunteer</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-sec">
+        <h2 class="h-main">Professional Experience</h2>
+
+        <div class="job">
+          <div class="job-head">
+            <span class="job-title">Web Team Lead | Laravel Expert | DevOps Engineer <span class="job-org">· 360Medlink Inc</span></span>
+            <span class="job-date current">Sep 2019 – present</span>
+          </div>
+          <ul>
+            <li>Lead code review across frontend and backend teams for client engagements spanning major pharma/medical companies (Novartis, Pfizer, Qutenza, Pierre Fabre), stepping in to write code directly on high-difficulty or backlogged tasks.</li>
+            <li>Own merge, release, and deployment processes; manage CI/CD pipelines across a Laravel/Angular/Spring Boot stack.</li>
+            <li>Manage cloud infrastructure across AWS (EC2, ECR, EKS, S3, Lambda, Route53, autoscaling, load balancing), Azure, and GoDaddy, including automation of deployment and scaling workflows.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head">
+            <span class="job-title">Laravel / Full-Stack Developer <span class="job-org">· 360Medlink Inc</span></span>
+            <span class="job-date">Sep 2017 – Sep 2019</span>
+          </div>
+          <ul>
+            <li>Intermediate developer on the same pharma/medical client engagements, specializing in Laravel backend development ahead of promotion to Web Team Lead.</li>
+          </ul>
+        </div>
+
+        <div class="earlier">
+          <p class="earlier-label">Earlier experience</p>
+          <p><b>Head of IT</b> · Mkd Company &amp; World Park (May 2015 – Jan 2016): managed a small IT team; built custom CMS/CRM platforms (WordPress, Symfony) incl. custom WordPress plugins.</p>
+          <p><b>Développeur / Développeur web</b> · Square Softwares / QUINQ GROUP (May 2014 – Apr 2015): built client websites (CodeIgniter, Symfony, CakePHP), incl. Association des Magistrats Tunisiens and a Tunisian law firm.</p>
+          <p><b>Responsable intégration, Freelance</b> · Adimpact, Belgium (May 2015 – Jan 2016): HTML email integration and dynamic websites from PSD templates.</p>
+          <p><b>Technical Assistant</b> · Stream Global Services (Jul 2013 – Mar 2014): technical phone support for SFR France and Bell Canada.</p>
+          <p><b>Développeur</b> · Med Infinity | The World Is Mine (Jul 2012 – Jun 2013): first web development role; PHP/WordPress.</p>
+        </div>
+      </section>
+
+      <section class="main-sec">
+        <h2 class="h-main" style="font-size:1.1rem;">Volunteering</h2>
+        <p class="row-main"><b>Coordinateur administratif</b> · Japanese Events in Tunisia (NGO)<span class="row-date">May 2016 – Jun 2018</span>Managed event websites (e.g., Banzai at Cité de la Culture and Palais des Congrès), coordinated with guests, and supported on-site event operations.</p>
+      </section>
+
+    </main>
+  </div>
+</div>
+</body>
+</html>
