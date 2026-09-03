@@ -115,10 +115,11 @@
 <h3>Concordia University</h3>
 <div class="role-line"><span>Research assistant, M.Sc. student</span><span class="date">Fall 2025 – Present</span></div>
 <ul>
-  <li>Lead author on SmartPatchLinker (FSE 2026 Demo Track) and "Humans Integrate, Agents Fix" (MSR 2026 Challenge Track).</li>
-  <li>Co-author on "Is This Pull Request Ready for Review?" (EASE 2026).</li>
-  <li>Investigating characteristics and developer practices around large pull requests.</li>
-  <li>Collaborating externally with the FARD Lab (UBC Okanagan) on CodeFaithBench, an LLM explanation faithfulness benchmark.</li>
+  <li>Studied how human reviewers reference and integrate agent-authored pull requests in code review, developing a taxonomy of integration patterns and finding that integration decisions remain almost entirely human-driven (Humans Integrate, Agents Fix, MSR 2026 Challenge Track). I want to build on this by developing predictive models of agent-authored PR merge success, translating these integration patterns into concrete guidance for how agent harnesses should structure and present changes for human review, and extending this work to study how agents collaborate with one another, not just with human reviewers.</li>
+  <li>Built SmartPatchLinker, a browser extension that detects semantically related patches in Gerrit code review in real time, addressing the problem of reviewers missing duplicate or conflicting concurrent changes when patches are reviewed in isolation (SmartPatchLinker, FSE 2026 Demo Track). I'm extending it with local LLM reranking for higher-precision matching, cross-platform support beyond Gerrit (starting with GitHub), and exploring how these patch-relatedness signals could be surfaced directly within an agent's own context window when agents act as reviewers or contributors themselves.</li>
+  <li>Co-authored a study on how developers signal that a pull request is ready for review, finding low adoption of readiness-for-review markers overall (9.8%) even as agent-authored pull requests remain largely integrated through human judgment (Is This Pull Request Ready for Review?, EASE 2026). This raises open questions about how agents could better signal task completion to human reviewers, which I want to explore as part of my broader work on agent-human review workflows.</li>
+  <li>Studying large and tangled pull requests: how human reviewers navigate their complexity and adjust their review strategies, and how LLMs and AI agents behave when faced with the same challenge.</li>
+  <li>Collaborate externally with the FARD Lab (UBC Okanagan) on CodeFaithBench, a benchmark for the causal faithfulness of LLM explanations of code reasoning.</li>
 </ul>
 
 <div class="subhead">Teaching experience</div>
